@@ -4,7 +4,10 @@
 module.exports = function towelSort (matrix) {
     let newA = [];
     let counter = 1;
-    for (let name of matrix) {
+    if(!arguments[0]){
+    return [];
+    } else {
+        for (let name of matrix) {
         if ( counter%2 !== 0 ) {
           newA = [...newA, ...name];
           counter++;
@@ -15,5 +18,6 @@ module.exports = function towelSort (matrix) {
         }
         
     };
+    }
   return newA;
 }
